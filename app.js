@@ -104,8 +104,12 @@ function playSong(index) {
     })
 
     currentAudio.addEventListener("ended", () => {
-        inputRange.value = 0
-        setPlayIcon(false)
+        if(songsInfo.length <= 1) {
+            inputRange.value = 0
+            setPlayIcon(false)
+            return
+        }
+        playNextSong()
     })
 
     currentAudio.play()
