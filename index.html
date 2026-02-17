@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div id="container">
+
+        <main id="music-player-container">
+            
+
+            <div id="music-player">
+                <img id= "image"style="height: 50%; width: 90%;" src="https://images.unsplash.com/photo-1564186763535-ebb21ef5277f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTExfHxtdXNpY3xlbnwwfHwwfHx8MA%3D%3D" alt="album_img">
+
+                <div style="height: 50%;">
+                    <h3 id="song-title">Select Song</h3>
+                    <input style="width: 90%;" type="range" name="" id="input-range">
+
+                    <div id="play-btns">
+                        <span id="prev-btn">
+                           <i class="fa-solid fa-backward"></i>
+                        </span>
+                        <span id="play-btn">
+                          <i id="play-icon"  class="fa-solid fa-play"></i>
+                        </span>
+                        <span id="next-btn">
+                          <i class="fa-solid fa-forward"></i>
+                        </span>
+                    </div>
+                    <div id="volume-control">
+                        <label for="volume-range">Volume</label>
+                        <input type="range" id="volume-range" min="0" max="1" step="0.01" value="0">
+                    </div>
+
+                </div>
+            </div>
+
+            <span id="collapse-expand">
+                <i id="expand-icon" class="fa-solid fa-arrow-right"></i>
+            </span>
+        </main>
+
+        <aside id="songs-list-container">
+            <h3>Playlist</h3>
+
+            <div id="songs-list">
+
+            </div>
+        </aside>
+
+
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
